@@ -30,6 +30,7 @@ public class AuthRepresentation extends BaseRepresentation {
 
 	private String userName;
 
+	private Set<String> permissions;
 	private Set<String> roles;
 
 	public String getUserId() {
@@ -135,4 +136,13 @@ public class AuthRepresentation extends BaseRepresentation {
 	public void setRoles(Set<String> roles) {
 		this.roles = roles;
 	}
+
+	public Set<String> getPermissions() {
+		return permissions;
+	}
+
+	public void setPermissions(Set<String> permissions) {
+		this.permissions = permissions;
+	}
+	
 }

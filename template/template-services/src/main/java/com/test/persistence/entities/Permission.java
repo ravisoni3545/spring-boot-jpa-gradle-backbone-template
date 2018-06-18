@@ -23,7 +23,7 @@ import com.test.util.CommonConstant;
  * 
  */
 @Entity
-@Table(name="tblpermission", schema = CommonConstant.EMBRACE_SCHEMA_NAME)
+@Table(name="tblpermission", schema = CommonConstant.SCHEMA_NAME)
 public class Permission implements Serializable {
 	private static final long serialVersionUID = 1L;
 

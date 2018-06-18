@@ -20,7 +20,7 @@ import com.test.util.CommonConstant;
  * 
  */
 @Entity
-@Table(name="tbluser_role", schema = CommonConstant.EMBRACE_SCHEMA_NAME)
+@Table(name="tbluser_role", schema = CommonConstant.SCHEMA_NAME)
 public class UserRole implements Serializable {
 	private static final long serialVersionUID = 1L;
 

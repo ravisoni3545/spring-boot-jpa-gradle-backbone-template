@@ -14,18 +14,28 @@ define([ "app", "views/loginView", "views/homeView", "views/headerView",
 				},
 				routes : {
 					"logout":"logout",
-					"search":"vendor"
+					"search":"searchLabel",
+						"addLabel":"addLabel"
 				},
 
-				vendor : function() {
+				searchLabel : function() {
 					
 					if(!app.homeView){
 						app.homeView=new homeview();
 					}
 						app.homeView.render();
+						if(!app.headerView){
+							app.headerView=new headerview();
+							app.headerView.render(app.sessionModel.get("userName"));
+						}
+				    	if(!app.navigationView){
+							app.navigationView=new navigationview();
+							app.navigationView.render();
+							App.init();
+						}
 									
 				},
-				propertyDetail:function(mlsname,mlsnumber,listingstatus){
+/*				propertyDetail:function(mlsname,mlsnumber,listingstatus){
 					if(!app.detailView){
 						app.detailView=new detailView();
 					}
@@ -39,7 +49,7 @@ define([ "app", "views/loginView", "views/homeView", "views/headerView",
 			    	app.jobView.setElement($('#maincontainer')).render();
 					app.jobView.fetchJobStatusDetails();
 			    		    				    	
-				},
+				},*/
 				
 				vendorSearch : function(){
 			    	if(!app.searchView){

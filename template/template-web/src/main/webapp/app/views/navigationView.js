@@ -13,7 +13,7 @@ define(["text!templates/navigation.html", "backbone","app", "SecurityUtil"],func
 			},
 			events          : {
 		         /*"click a[href=#vendor]":"showCreateVendorPage",*/
-		         "click a[href=#search]":"showSearchPage"*/
+		         "click a[href=#search]":"showSearchPage"
 		    },
 			el:"#sideNavigation",
 			navpermissions:null,
@@ -23,7 +23,7 @@ define(["text!templates/navigation.html", "backbone","app", "SecurityUtil"],func
 			     	console.log(this.navpermissions)
 			     	this.$el.html(this.template({navpermission:this.navpermissions}));
 			     	return this;
-		    }/*,
+		    },/*,
 		    showCreateVendorPage : function() {
 		    	if(!app.homeView){
 		    		 app.homeView=new vendorcompanyview();
@@ -31,7 +31,7 @@ define(["text!templates/navigation.html", "backbone","app", "SecurityUtil"],func
 		    	app.homeView.setElement($('#maincontainer')).render();
 		    },*/
 		    
-		    showSearchPage : function() {
+/*		    showSearchPage : function() {
 		    	this.clearOrganizationData();
 		    	if(!app.searchView){
 		    		 app.searchView=new searchView();
@@ -41,7 +41,7 @@ define(["text!templates/navigation.html", "backbone","app", "SecurityUtil"],func
 		    clearOrganizationData : function() {
 		    	app.vendorCompanyModel = null;
 		     	app.vendorId = null;
-		    }
+		    }*/
  		    
 		    
 	});

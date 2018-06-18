@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.test.persistence.entities.User;
 import com.test.security.config.CustomUserDetailsService;
+import com.test.security.config.SecurityUser;
 import com.test.view.rest.presentation.AuthRepresentation;
 import com.test.view.rest.presentation.ViewMapper;
 
@@ -55,8 +56,10 @@ public class AuthController {
 					.getAuthentication().getPrincipal();
 	
 
+	
 		AuthRepresentation auth = userViewMapper.map(user,
 				AuthRepresentation.class);
+		auth.setPermissions(((SecurityUser)user).getPermissions());
 		auth.setStatusCode("200");
 		auth.setMessage("Authentication Successful");
 		return auth;
